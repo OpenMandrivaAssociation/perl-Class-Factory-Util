@@ -1,7 +1,7 @@
 %define module	Class-Factory-Util
 %define name	perl-%{module}
-%define version	1.6
-%define	release	%mkrel 2
+%define version	1.7
+%define	release	%mkrel 1
 
 Name:		%{name}
 Version:	%{version}
@@ -14,6 +14,7 @@ Url:		http://search.cpan.org/dist/%{module}
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	perl-devel
+BuildRequires:  perl(Module::Build)
 
 %description
 This module exports a method that is useful for factory classes.
