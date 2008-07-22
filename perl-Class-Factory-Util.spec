@@ -1,7 +1,7 @@
 %define module	Class-Factory-Util
 %define name	perl-%{module}
 %define version	1.7
-%define	release	%mkrel 1
+%define	release	%mkrel 3
 
 Name:		%{name}
 Version:	%{version}
