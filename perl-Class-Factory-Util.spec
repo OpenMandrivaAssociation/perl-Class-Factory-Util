@@ -1,26 +1,26 @@
-%define module	Class-Factory-Util
-%define name	perl-%{module}
-%define version	1.7
-%define	release	%mkrel 4
+%define upstream_name	 Class-Factory-Util
+%define upstream_version 1.7
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Provide utility methods for factory classes
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Source0:	%{module}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{module}
-BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	perl-devel
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:  perl(Module::Build)
+
+BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module exports a method that is useful for factory classes.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -41,4 +41,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes
 %{perl_vendorlib}/Class/*
 %{_mandir}/*/*
-
