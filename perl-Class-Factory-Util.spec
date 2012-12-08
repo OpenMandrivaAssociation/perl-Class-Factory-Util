@@ -41,3 +41,37 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes
 %{perl_vendorlib}/Class/*
 %{_mandir}/*/*
+
+
+%changelog
+* Sat May 28 2011 Funda Wang <fwang@mandriva.org> 1.700.0-2mdv2011.0
++ Revision: 680820
+- mass rebuild
+
+* Sat Feb 13 2010 Jérôme Quelin <jquelin@mandriva.org> 1.700.0-1mdv2011.0
++ Revision: 505428
+- rebuild using %%perl_convert_version
+
+* Fri Sep 04 2009 Thierry Vignaud <tv@mandriva.org> 1.7-4mdv2010.0
++ Revision: 430328
+- rebuild
+
+* Wed Jul 23 2008 Thierry Vignaud <tv@mandriva.org> 1.7-3mdv2009.0
++ Revision: 241185
+- rebuild
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Sun Apr 29 2007 Olivier Thauvin <nanardon@mandriva.org> 1.7-1mdv2008.0
++ Revision: 19314
+- 1.7
+
+
+* Fri Mar 31 2006 Rafael Garcia-Suarez <rgarciasuarez@mandriva.com> 1.6-2mdk
+- Rebuild
+
+* Wed Aug 25 2004 Rafael Garcia-Suarez <rgarciasuarez@mandrakesoft.com> 1.6-1mdk
+- Initial MDK release.
+
