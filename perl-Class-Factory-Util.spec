@@ -1,10 +1,10 @@
-%define upstream_name	 Class-Factory-Util
+%define upstream_name Class-Factory-Util
 %define upstream_version 1.7
 
 Summary:	Provide utility methods for factory classes
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	13
+Release:	14
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
@@ -18,20 +18,19 @@ BuildRequires:	perl(Module::Build)
 This module exports a method that is useful for factory classes.
 
 %prep
-%setup -qn %{upstream_name}-%{upstream_version}
+%autosetup -n %{upstream_name}-%{upstream_version} -p1
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
-%make
+perl Makefile.PL INSTALLDIRS=vendor
+%make_build
 
 %check
 %make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc Changes
 %{perl_vendorlib}/Class/*
-%{_mandir}/man3/*
-
+%doc %{_mandir}/man3/*
