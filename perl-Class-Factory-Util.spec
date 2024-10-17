@@ -7,7 +7,7 @@ Version:	%perl_convert_version %{upstream_version}
 Release:	15
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.bz2
 BuildArch:	noarch
 BuildRequires:	perl(Test::More)
