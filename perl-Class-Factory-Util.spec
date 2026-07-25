@@ -3,12 +3,12 @@
 
 Summary:	Provide utility methods for factory classes
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	15
+Version:	%{upstream_version}
+Release:	16
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:		https://metacpan.org/dist/Class-Factory-Util
+Source0:	https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Class-Factory-Util-%{upstream_version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl(Test::More)
